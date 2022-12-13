@@ -7,7 +7,7 @@ import AvatarDance from "./AvatarDance"
 const Experience = () => {
   return (
     <>
-      <OrbitControls />
+      <OrbitControls makeDefault />
       {/* <mesh>
         <boxBufferGeometry />
         <meshNormalMaterial />
@@ -18,6 +18,8 @@ const Experience = () => {
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
+      <directionalLight intensity={3} castShadow position={[2.5, 8, 5]} shadow-mapSize={[512, 512]} />
+
       <group position={[0, -1, 0]}>
         <Suspense fallback={null}>
           {/* <Walking /> */}
@@ -30,7 +32,7 @@ const Experience = () => {
         position={[0, 1, 0]}
         receiveShadow
       >
-        <planeBufferGeometry args={[10, 10, 1, 1]} />
+        <planeBufferGeometry args={[1, 1, 1, 1]} />
         <shadowMaterial transparent opacity={0.2} />
       </mesh>
     </>
